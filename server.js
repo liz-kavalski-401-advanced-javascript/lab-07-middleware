@@ -2,11 +2,20 @@
 
 const express = require('express');
 const notFound = require('./404.js');
-const errorHandler = require ('./error.js')
+const errorHandler = require ('./error')
 
 const app = express();
 
 const PORT = process.env.PORT || 8080;
+
+let requestTime = function (req, res, next) {
+  req.requestTime = Date(Date.now());
+  console.log(req.requestTime, ' in the fuction')
+  next();
+};
+
+app.use(requestTime);
+
 
 app.get('/a', (req,res) => {
   res.status(200).send('Route A');
@@ -21,6 +30,9 @@ app.get('/c', (req,res) => {
 });
 
 app.get('/d', (req,res) => {
+  if(ture){
+    app.use(errorHandler)
+  }
   res.status(200).send('Route D');
 });
 
