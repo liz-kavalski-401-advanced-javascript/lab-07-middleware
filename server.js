@@ -14,6 +14,17 @@ let requestTime = function (req, res, next) {
   next();
 };
 
+let newBMiddleware = function (number){
+  // if (typeof number===Number){
+    return function(req,res,next){
+      req.number = number*number;
+      console.log(req.number);
+      next();
+    }
+    // }
+  };
+ 
+
 app.use(requestTime);
 
 
@@ -21,7 +32,7 @@ app.get('/a', (req,res) => {
   res.status(200).send('Route A');
 });
 
-app.get('/b', (req,res) => {
+app.get('/b',newBMiddleware(2), (req,res) => {
   res.status(200).send('Route B');
 });
 
