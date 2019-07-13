@@ -30,8 +30,8 @@ app.get('/c', (req,res) => {
 });
 
 app.get('/d', (req,res) => {
-  if(ture){
-    app.use(errorHandler)
+  if('/d'==='/d'){
+    throw errorHandler;
   }
   res.status(200).send('Route D');
 });
