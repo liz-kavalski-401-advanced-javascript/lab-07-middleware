@@ -2,8 +2,8 @@
 
 const express = require('express');
 const notFound = require('./404.js');
-const errorHandler = require ('./error')
-
+const errorHandler = require ('./error');
+const routes= require('./routes');
 const app = express();
 
 const PORT = process.env.PORT || 8080;
@@ -36,16 +36,7 @@ app.get('/b',newBMiddleware(2), (req,res) => {
   res.status(200).send('Route B');
 });
 
-app.get('/c', (req,res) => {
-  res.status(200).send('Route C');
-});
-
-app.get('/d', (req,res) => {
-  if('/d'==='/d'){
-    throw errorHandler;
-  }
-  res.status(200).send('Route D');
-});
+app.use(routes);
 
 app.use('*', notFound);
 
