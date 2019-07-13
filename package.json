@@ -1,0 +1,28 @@
+{
+  "name": "test-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon server.js",
+    "test": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.0.1",
+    "express": "^4.16.4",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liz-kavalski-401-advanced-javascript/lab-07-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liz-kavalski-401-advanced-javascript/lab-07-middleware/issues"
+  },
+  "homepage": "https://github.com/liz-kavalski-401-advanced-javascript/lab-07-middleware#readme"
+}
