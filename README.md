@@ -1,8 +1,6 @@
 # lab-07-middleware
 
-## Project Name
-
-### Author: Student/Group Name
+### Author: Liz Kavalski
 
 ### Links and Resources
 [PR Request](https://github.com/liz-kavalski-401-advanced-javascript/lab-07-middleware/pull/2/commits/f531ffc7c2ae55159f888656793043422a87137d)
